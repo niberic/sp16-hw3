@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160223050318) do
+ActiveRecord::Schema.define(version: 20160224192913) do
 
   create_table "cats", force: true do |t|
     t.string "name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20160223050318) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "urgency"
+    t.boolean  "finished",    limit: 255
   end
 
   create_table "users", force: true do |t|

@@ -1,1 +1,36 @@
 <h1> Welcome to my page about Cats and People! </h1>
+
+<h3> Here are a list of cats </h3>
+<% @cats.each do |c| %>
+  <%= c.name + " the cat" %>
+  <br>
+<% end %>
+
+<h3> Now for a list of things I finished. </h3>
+<% @todos.each do |t| %>
+  <% if t.finished == true %>
+  <%= "Name: " + t.name %>
+  <%= " Descriptions: " + t.description %>
+  <%= " Urgency: " + t.urgency %>
+  <% end %>
+  <br>
+<% end %>
+
+<h3> Now for a list of things I need to do. </h3>
+<% @todos.each do |t| %>
+  <% if t.finished == false %>
+    <%= "Name: " + t.name %>
+    <%= " Descriptions: " + t.description %>
+    <%= " Urgency: " + t.urgency %>
+  <% end %>
+  <br>
+<% end %>
+
+
+
+<h3> Finally, a list of cool users </h3>
+<% @users.each do |u| %>
+  <%= "Username: " + u.username %>
+  <%= "Email: " + u.email %>
+  <br>
+<% end %>
